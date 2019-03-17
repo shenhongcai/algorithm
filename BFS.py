@@ -18,6 +18,7 @@ def bfs(graph, start):
     queue.append(start)
     seen = set()     # 用一个集合记录已经访问过的点
     seen.add(start)
+    parent={start: None}
 
     while queue:
         vertex = queue.popleft()
@@ -26,10 +27,21 @@ def bfs(graph, start):
             if w not in seen:
                 queue.append(w)
                 seen.add(w)
+                parent[w]=vertex
         print(vertex)
+    return parent
+start="E"
+end="B"
+parent = bfs(graph,start)
+path=[]
+while end:
+    path.append(end)
+    end=parent[end]
+
+print(list(reversed(path)))
 
 
-bfs(graph, "A")
+
 
 
 
