@@ -3,8 +3,8 @@
 
 * 广度优先搜索BFS
 
-![图](/Users/wangjiaxin/Desktop/picture/1.png)
-<center>(1).无向图</center>
+![picture](algorithm/1.png)
+
 
                 
            
@@ -29,7 +29,11 @@
 
 
 
-![](/Users/wangjiaxin/Desktop/picture/2.png)
+
+
+
+
+![picture](algorithm/2.png)
 
 
 
