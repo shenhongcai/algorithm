@@ -3,7 +3,7 @@
 
 * 广度优先搜索BFS
 
-![picture](https://github.com/shenhongcai/algorithm/blob/master/1.png)
+![picture](https://github.com/shenhongcai/ImageStore/blob/master/1.png)
 
 
                 
@@ -27,13 +27,7 @@
 
 
 
-
-
-
-
-
-
-![picture](https://github.com/shenhongcai/algorithm/blob/master/2.png)
+![picture](https://github.com/shenhongcai/ImageStore/blob/master/2.png)
 
 
 
