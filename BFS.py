@@ -26,14 +26,16 @@ def bfs(graph, start):
         for w in nodes:
             if w not in seen:
                 queue.append(w)
-                seen.add(w)
-                parent[w]=vertex
+                seen.add(w)   # mark node "w" as seen noded
+                parent[w] = vertex   # vertex is the fater of w
         print(vertex)
     return parent
-start="E"
-end="B"
+
+
+start = "E"
+end = "B"
 parent = bfs(graph,start)
-path=[]
+path = []
 while end:
     path.append(end)
     end=parent[end]

@@ -15,6 +15,8 @@ graph = {"A": {"B": 5, "C": 1},
         }
 
 
+
+
 def init_distance(graph, s):
 
     distance = {s: 0}
@@ -47,8 +49,8 @@ def dijkstra(graph, s):
     return parent, distance
 
 
-parent, distance = dijkstra(graph, "A")
-end = "B"
+parent, distance = dijkstra(graph, "B")
+end = "A"
 path=[]
 while end:
     path.append(end)
