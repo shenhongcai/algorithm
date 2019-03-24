@@ -13,11 +13,10 @@ def selectSort(arr):
 
     n = len(arr)
     for i in range(n-1):    # 需要遍历 n-1 次
-        min_index = i
-        for j in range(i+1, n):
-            if arr[j] < arr[min_index]:
-                min_index = j
-        arr[min_index], arr[j] = arr[j], arr[min_index]    # 将最小项归为 min_index
+        for j in range(i,n):
+            if arr[i]>arr[j]:
+                arr[i], arr[j]=arr[j],arr[i]
+
     return arr
 
 
@@ -28,7 +27,6 @@ if __name__ == "__main__":
     # 测量算法性能
     t1 = timeit.Timer("selectSort(test1),test1", setup="from __main__ import selectSort,test1")
     print("选择排序算法耗费时间:%s 秒" % t1.timeit(number=3))
-    print(t1.repeat(4, 3))   # 重复三次，每次执行3遍测试代码
     print(selectSort(test1))
 
 """

@@ -25,15 +25,15 @@ def init_distance(graph,start):
 
 def dijkstra(graph,start):
     pqueue=[]
-    heapq.heappush(pqueue, (start, 0))
+    heapq.heappush(pqueue, (0, start))
     seen=set()
     parent = {start: None}
     distance = init_distance(graph, start)
 
     while pqueue:
         pairs = heapq.heappop(pqueue) # pick the minist vertex from pqueue
-        u=pairs[0]
-        dist=pairs[1]
+        u=pairs[1]
+        dist=pairs[0]
         seen.add(u)
 
         nodes = graph[u].keys()  # 列出u的邻接点
@@ -41,9 +41,10 @@ def dijkstra(graph,start):
         for w in nodes:
             if w not in seen:
                 if dist+graph[u][w] < distance[w]:
-                    heapq.heappush(pqueue, (w, dist + graph[u][w]))
+                    heapq.heappush(pqueue, (dist + graph[u][w],w))
                     parent[w] = u
                     distance[w] = dist+graph[u][w]
+
 
     return parent, distance
 
@@ -87,6 +88,7 @@ if __name__ == "__main__":
     while end:
         path.append(end)
         end = parent[end]
+    path=path[::-1]
     print(path)
 
 
